@@ -1,0 +1,10 @@
+[package]
+name = "dnsquery"
+version = "0.1.4"
+edition = "2021"
+authors = ["Rotko Networks <hq@rotko.net>"]
+description = "Checks if a specific TXT record exists for a given domain"
+
+[dependencies]
+tokio = { version = "1.35", features = ["rt-multi-thread", "macros"] }
+trust-dns-resolver = { version = "^0.23", features = ["dns-over-rustls"] }
